@@ -76,9 +76,15 @@ fn max_palindrom(input_str: &str) -> &[u8] {
 
 fn main() {
     let mut input_str = String::new();
-
+    let palindrom;
+    
     std::io::stdin().read_line(&mut input_str).expect("Fail to read line");
 
-    let palindrom = max_palindrom(&input_str);
-    println!("{}", std::str::from_utf8(&palindrom).unwrap());
+    if input_str.len() > 1 {
+        palindrom = max_palindrom(&input_str); 
+        
+        println!("{}", std::str::from_utf8(&palindrom).unwrap());
+    } else {
+        println!("{}", input_str);
+    }
 }

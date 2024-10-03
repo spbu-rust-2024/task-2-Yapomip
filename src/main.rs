@@ -26,7 +26,6 @@ fn calculate1(input_str: &[u8]) -> &[u8] {
             ans_len = len;
             ans_r = r;
             ans_l = l;
-            println!("      {:?}", std::str::from_utf8(&input_str[ans_l..=ans_r]).unwrap());
         }
     }
 
@@ -58,7 +57,6 @@ fn calculate2(input_str: &[u8]) -> &[u8] {
             ans_len = len;
             ans_r = r;
             ans_l = l;
-            println!("      {:?}", std::str::from_utf8(&input_str[ans_l..=ans_r]).unwrap());
         }
     }
 

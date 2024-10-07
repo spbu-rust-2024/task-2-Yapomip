@@ -65,12 +65,18 @@ fn all_calculate(input_str: &[u8]) -> &[u8] {
 }
 
 fn max_palindrom(input_str: &str) -> &str {
-     return std::str::from_utf8(all_calculate(input_str.as_bytes())).unwrap();
+    if input_str.len() < 2 {
+        return input_str;
+    }
+    return std::str::from_utf8(all_calculate(input_str.as_bytes())).unwrap();
 }
 
 fn main() {
     let mut input_str = String::new();
     
+    println!("{}", max_palindrom(""));
+    println!("{}", max_palindrom("q"));
+    println!("{}", max_palindrom("qwq"));
     std::io::stdin().read_line(&mut input_str).expect("Fail to read line");
 
     println!("{}", max_palindrom(&input_str));

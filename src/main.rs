@@ -51,7 +51,7 @@ fn all_calculate(input_str: &[u8]) -> &[u8] {
         d2[i] = len;
         
         if i + len > r2 + 1 {
-            l2 =    ;
+            l2 = i - len;
             r2 = i + len - 1;
         }
         if len * 2 > ans_len {
